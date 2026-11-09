@@ -127,6 +127,33 @@
   width: min(680px, 92vw);
 }
 
+.home__socials {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-top: auto;
+  padding-top: 2rem;
+}
+
+.social-link {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  color: var(--text-dim);
+  padding: 0.45rem 1rem;
+  border: 3px solid var(--border);
+  border-radius: var(--radius-sm);
+  background: var(--bg-panel);
+  transition: color 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+}
+
+.social-link:hover {
+  color: var(--primary);
+  border-color: var(--primary);
+  transform: translateY(-2px);
+}
+
 /* ---------- Nav Tile ---------- */
 
 .nav-tile {
@@ -321,6 +348,65 @@
   color: var(--primary);
   border-color: var(--primary);
   transform: translateX(-3px);
+}
+
+/* ---------- Commission Pricing ---------- */
+
+.price-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.price-section {
+  background: var(--bg-panel);
+  border: var(--border-thick) solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+}
+
+.price-section__title {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--primary);
+  margin: 0 0 1rem;
+}
+
+.price-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.7rem 0;
+  border-bottom: 2px solid var(--border);
+}
+
+.price-row:last-child {
+  border-bottom: none;
+}
+
+.price-row__label {
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.price-row__price {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 1.05rem;
+  color: var(--secondary);
 }
 
 /* ---------- NSFW Toggle ---------- */
@@ -590,12 +676,12 @@
 /* ---------- NSFW Dark Mode ---------- */
 
 body.nsfw-dark {
-  --bg-main: #0e0e12;
-  --bg-panel: #17171f;
+  --bg-main: #313131;
+  --bg-panel: #1a1a1a;
   --bg-panel-hover: #21212c;
   --bg-card: #17171f;
-  --text: #ececf1;
-  --text-dim: #a2a2b0;
-  --text-faint: #a2a2b0;
+  --text: #00d9ff;
+  --text-dim: #00d9ff;
+  --text-faint: #08c3e4;
   --border-bright: var(--primary-bright);
 }

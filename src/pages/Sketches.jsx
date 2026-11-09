@@ -42,7 +42,6 @@ export default function Sketches() {
     <main className="page">
       <BackLink />
       <header className="page__header">
-        <span className="page__tag">// GALLERY</span>
         <h1 className="page__title">Gallery</h1>
       </header>
       <div className="page__content">

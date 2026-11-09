@@ -8,6 +8,15 @@ import galleryBlueImg from '../assets/images/GalleryBlue.png'
 import aboutRedImg from '../assets/images/AboutRed.png'
 import aboutBlueImg from '../assets/images/AboutBlue.png'
 
+//todo: replace with actual links
+const SOCIALS = [
+  { label: 'Twitter', href: 'https://twitter.com/yourhandle' },
+  { label: 'Bluesky', href: 'https://bsky.app/profile/yourhandle.bsky.social' },
+  { label: 'Newgrounds', href: 'https://newgrounds.com/yourhandle' },
+  { label: 'FurAffinity', href: 'https://www.furaffinity.net/user/yourhandle/' },
+  { label: 'Ko-fi', href: 'https://ko-fi.com/yourhandle' },
+]
+
 const TILES = [
   { to: '/about', label: 'About', imageSrc: aboutRedImg, hoverImageSrc: aboutBlueImg, fullImage: true },
   { to: '/sketches', label: 'Gallery', imageSrc: galleryRedImg, hoverImageSrc: galleryBlueImg, fullImage: true },
@@ -29,6 +38,20 @@ export default function Home() {
       <nav className="home__grid" aria-label="Site sections">
         {TILES.map((tile) => (
           <NavTile key={tile.label} {...tile} />
+        ))}
+      </nav>
+
+      <nav className="home__socials" aria-label="Social media">
+        {SOCIALS.map((social) => (
+          <a
+            key={social.label}
+            href={social.href}
+            target="_blank"
+            rel="noreferrer"
+            className="social-link"
+          >
+            {social.label}
+          </a>
         ))}
       </nav>
     </main>
