@@ -10,11 +10,11 @@ import aboutBlueImg from '../assets/images/AboutBlue.png'
 
 //todo: replace with actual links
 const SOCIALS = [
-  { label: 'Twitter', href: 'https://twitter.com/yourhandle' },
-  { label: 'Bluesky', href: 'https://bsky.app/profile/yourhandle.bsky.social' },
-  { label: 'Newgrounds', href: 'https://newgrounds.com/yourhandle' },
-  { label: 'FurAffinity', href: 'https://www.furaffinity.net/user/yourhandle/' },
-  { label: 'Ko-fi', href: 'https://ko-fi.com/yourhandle' },
+  { label: 'Twitter', href: 'https://twitter.com/LeSuperPoop' },
+  { label: 'Bluesky', href: 'https://bsky.app/profile/thesuperpoop.bsky.social' },
+  { label: 'Newgrounds', href: 'https://thesuperpoop.newgrounds.com/' },
+  { label: 'FurAffinity', href: 'https://www.furaffinity.net/user/thesuperpoop' },
+  { label: 'Ko-fi', href: 'https://ko-fi.com/lesuperpoop' },
 ]
 
 const TILES = [
