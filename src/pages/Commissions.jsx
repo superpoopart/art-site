@@ -1,15 +1,11 @@
 import BackLink from '../components/BackLink.jsx'
 
-const BASE_PRICES = [
-  { label: 'Bust', price: 30 },
-  { label: 'Full Body', price: 50 },
-  { label: 'Extra Character', price: 30 },
-]
+const HOURLY_RATE = 22
 
-const OPTIONS = [
-  { label: 'Monochrome', price: 10 },
-  { label: 'Full Color', price: 20 },
-  { label: 'NSFW', price: 30 },
+const SERVICES = [
+  { label: 'Sketch', time: '~30 min', price: HOURLY_RATE * 0.5 },
+  { label: 'Full character render', time: '3–4 hrs', price: `${HOURLY_RATE * 3}–${HOURLY_RATE * 4}` },
+  { label: 'Character render + background', time: '5+ hrs', price: `${HOURLY_RATE * 5}+` },
 ]
 
 function PriceList({ title, items }) {
@@ -19,7 +15,10 @@ function PriceList({ title, items }) {
       <ul className="price-list">
         {items.map((item) => (
           <li key={item.label} className="price-row">
-            <span className="price-row__label">{item.label}</span>
+            <span className="price-row__label">
+              {item.label}
+              <span className="price-row__time">{item.time}</span>
+            </span>
             <span className="price-row__price">${item.price}</span>
           </li>
         ))}
@@ -37,9 +36,12 @@ export default function Commissions() {
         <h1 className="page__title">Commissions</h1>
       </header>
       <div className="page__content">
+        <p className="commissions-note">
+          Commissions are billed at <strong>${HOURLY_RATE}/hr</strong>. Final price
+          depends on complexity — these are estimates.
+        </p>
         <div className="price-grid">
-          <PriceList title="Base Prices" items={BASE_PRICES} />
-          <PriceList title="Options" items={OPTIONS} />
+          <PriceList title="Estimated Pricing" items={SERVICES} />
         </div>
       </div>
     </main>
